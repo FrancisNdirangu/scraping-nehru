@@ -16,5 +16,13 @@ results = soup.find(id="content")
 
 table_rows = results.find_all('tr')
 
+#for row in table_rows:
+    ##print(row.text,end="\n")
+
+data_records = []
+
 for row in table_rows:
-    print(row.text,end="\n")
+    for column in row:
+        data_records.append(column.text)
+
+print(data_records)
