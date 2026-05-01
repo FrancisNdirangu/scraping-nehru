@@ -12,4 +12,9 @@ soup = BeautifulSoup(page.content,"html.parser")
 
 results = soup.find(id="content")
 
-print(results.prettify())
+#print(results.prettify())
+
+table_rows = results.find_all('tr')
+
+for row in table_rows:
+    print(row.text,end="\n")
