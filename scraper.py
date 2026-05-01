@@ -8,4 +8,4 @@ tx = response.text
 enc = response.encoding
 js = response.json
 
-print(js)
+print(tx)
