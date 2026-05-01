@@ -26,3 +26,11 @@ for row in table_rows:
         data_records.append(column.text)
 
 print(data_records)
+
+"""currently the data doesnt look the way I want import 
+    I think what I will do is have an empty list in for every row in table_rows
+    then ill append every column to that empty row list
+    then ill append the row list to the data_records
+    however I must come up with a way of appending the row to the data_records and deleting the contents of the row after 5 increments
+    however since the top few rows have titles I must first clean the table that is received then do all the operations to clean the data
+    its possible that pandas could even be useful, think about this some more"""
