@@ -8,4 +8,8 @@ page = requests.get(url)
 
 soup = BeautifulSoup(page.content,"html.parser")
 
-print(soup.title.text)
+#print(soup.title.text)
+
+results = soup.find(id="content")
+
+print(results.prettify())
