@@ -25,7 +25,10 @@ for row in table_rows:
     for column in row:
         data_records.append(column.text)
 
-print(data_records)
+#print(data_records)
+row_titles = data_records[4:9]
+print(row_titles)
+#print(data_records[4:])
 
 """currently the data doesnt look the way I want import 
     I think what I will do is have an empty list in for every row in table_rows
