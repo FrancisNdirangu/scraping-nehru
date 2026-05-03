@@ -20,14 +20,26 @@ table_rows = results.find_all('tr')
     ##print(row.text,end="\n")
 
 data_records = []
-
+iterator = 1
+list_of_records = []
+row_records = []
 for row in table_rows:
+
     for column in row:
         data_records.append(column.text)
-
+        row_records.append(column.text)
+        iterator +=1
+        #print(row_records)
+        if iterator == 5:
+            list_of_records.append(row_records)
+            row_records = []
+            iterator=1
+            #print(row_records)
 #print(data_records)
 row_titles = data_records[4:9]
-print(row_titles)
+#print(row_titles)
+print(list_of_records)
+#print(list_of_records)
 #print(data_records[4:])
 
 """currently the data doesnt look the way I want import 
