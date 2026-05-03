@@ -20,7 +20,7 @@ table_rows = results.find_all('tr')
     ##print(row.text,end="\n")
 
 data_records = []
-iterator = 1
+iterator = 0
 list_of_records = []
 row_records = []
 for row in table_rows:
@@ -33,7 +33,7 @@ for row in table_rows:
         if iterator == 5:
             list_of_records.append(row_records)
             row_records = []
-            iterator=1
+            iterator=0
             #print(row_records)
 #print(data_records)
 row_titles = data_records[4:9]
